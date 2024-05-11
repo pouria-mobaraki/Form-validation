@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header class="signup-header">
+          <h1>Signup</h1>
+        </header>
+        <main class="signup-body">
+          <form action="">
+            <div>
+              <label for="name">Full Name</label>
+              <input
+                type="text"
+                placeholder="Type name here"
+                id="name"
+                required
+                pattern="/^[A-Za-z]*\s{1}[A-Za-z]*$/"
+              />
+              <i class="fa-solid"></i>
+              <span id="name-error"></span>
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                placeholder="xyz@gmail.com"
+                id="email"
+                required
+              />
+              <i class="fa-solid"></i>
+              <span id="email-error"></span>
+            </div>
+
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                placeholder="at least 8 chracters"
+                id="password"
+                required
+                min="8"
+                max="30"
+              />
+              <i class="fa-solid"></i>
+              <span id="pass-error"></span>
+            </div>
+
+            <div>
+              <input type="submit" value="Create Account" class="submit" />
+            </div>
+          </form>
+        </main>
+
+        <footer class="signup-footer">
+          <p>Already have an account ? <a href="">Login</a></p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f21df3637a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
